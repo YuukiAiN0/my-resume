@@ -12,7 +12,7 @@ export default function Resume() {
     name: "Nanthawat Eiamsamarng",
     title: "ERP Enablement Specialist",
     email: "nanthawat.esa@gmail.com",
-    phone: "0804432667",
+    phone: "080-443-2667",
     location: "99/80 Atoll Bali, Luang Phaeng Rd, Khlong Luang Phaeng, Chachoengsao, Chachoengsao City, 24000",
     linkedin: "https://www.linkedin.com/in/nanthawat-eiamsamarng-2054872b0/",
     github: "https://github.com/YuukiAiN0",
@@ -25,9 +25,9 @@ export default function Resume() {
       company: "TechSpace Co., Ltd.",
       period: "Oct 2024 - Apr 2025",
       description: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Improved application performance by 40% through optimization",
-        "Mentored junior developers and conducted code reviews"
+        "Provided helpdesk and on-site technical support, resolving hardware, software, and network issues",
+        "Delivered training sessions on FortiSASE security solutions and Slack collaboration tools, improving team productivity and security awareness",
+        "Created and maintained IT knowledge base documentation, technical articles, and video tutorials to enhance self-service support capabilities"
       ]
     },
     {
@@ -35,9 +35,9 @@ export default function Resume() {
       company: "TechSpace Co., Ltd.",
       period: "May 2025 - Sep 2025",
       description: [
-        "Built RESTful APIs using Node.js and Express",
-        "Developed responsive frontend using React and TypeScript",
-        "Implemented CI/CD pipelines reducing deployment time by 60%"
+        "Developed and maintained comprehensive technical documentation, user guides, and training materials for Appika Business Management Software",
+        "Designed and delivered role-based training programs for marketing, sales, and operations teams",
+        "Conducted UI/UX quality assurance testing and collaborated with product development teams to identify pain points",
       ]
     }
   ];
@@ -52,16 +52,23 @@ export default function Resume() {
   ];
 
   const skills = {
-    "Hardskills": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js"],
-    "Softskills": ["Node.js", "Express", "Python", "Django", "REST APIs"]
+    "Hardskills": ["Business Process Mapping & Workflow Design", "System Configuration", "Technical Documentation", "System Testing & Quality Assurance"],
+    "Softskills": ["Time Management & Prioritization", "Team Collaboration & Leadership", "Training & Presentation Delivery", "Problem-Solving & Analytical Thinking"],
+    "Tools": ["Trello", "Slack", "Figma"]
   };
 
   const projects = [
     {
       name: "KTCM Chatbot",
       tech: "Dialogflow ES, Vercel",
-      description: "Full-featured online shopping platform with payment integration",
+      description: "AI-powered conversational chatbot for Kanchanaphisek Technical College Mahanakorn, providing automated student support for admissions inquiries, course information, campus facilities, and general institutional queries through natural language processing.",
       link: "https://ktcm-chatbot.vercel.app"
+    },
+    {
+      name: "Personal Discord Bot (On-Going)",
+      tech: "Discord.py, ...",
+      description: "...",
+      link: "#"
     }
   ];
 
@@ -309,7 +316,7 @@ export default function Resume() {
 
       {/* Footer */}
       <footer className={`${darkMode ? 'bg-gray-800' : 'bg-white'} mt-12 py-6 text-center`}>
-        <p>© 2024 {profile.name}. All rights reserved.</p>
+        <p>© 2025 {profile.name}. All rights reserved.</p>
       </footer>
     </div>
   );
