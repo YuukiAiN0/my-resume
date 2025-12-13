@@ -9,10 +9,10 @@ export default function Resume() {
 
   // Personal Information - CUSTOMIZE THIS
   const profile = {
-    name: "Your Name",
-    title: "Full Stack Developer",
-    email: "your.email@example.com",
-    phone: "+1 (555) 123-4567",
+    name: "Nanthawat Eiamsamarng",
+    title: "ERP Enablement Specialist",
+    email: "nanthawat.esa@gmail.com",
+    phone: "0804432667",
     location: "San Francisco, CA",
     linkedin: "linkedin.com/in/yourprofile",
     github: "github.com/yourusername",
@@ -168,7 +168,7 @@ export default function Resume() {
         {/* Section Navigation */}
         <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-4 mb-8`}>
           <div className="flex flex-wrap gap-2">
-            {['about', 'experience', 'skills', 'projects', 'education', 'contact'].map((section) => (
+            {['about', 'experience', 'skills', 'projects', 'education'].map((section) => (
               <button
                 key={section}
                 onClick={() => setActiveSection(section)}
