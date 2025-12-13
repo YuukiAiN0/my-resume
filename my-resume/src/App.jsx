@@ -25,9 +25,9 @@ export default function Resume() {
       company: "TechSpace Co., Ltd.",
       period: "Oct 2024 - Apr 2025",
       description: [
-        "Provided helpdesk and on-site technical support, resolving hardware, software, and network issues",
-        "Delivered training sessions on FortiSASE security solutions and Slack collaboration tools, improving team productivity and security awareness",
-        "Created and maintained IT knowledge base documentation, technical articles, and video tutorials to enhance self-service support capabilities"
+        "Provided helpdesk and on-site technical support, resolving hardware, software, and network issues.",
+        "Delivered training sessions on FortiSASE security solutions and Slack collaboration tools, improving team productivity and security awareness.",
+        "Created and maintained IT knowledge base documentation, technical articles, and video tutorials to enhance self-service support capabilities."
       ]
     },
     {
@@ -35,9 +35,9 @@ export default function Resume() {
       company: "TechSpace Co., Ltd.",
       period: "May 2025 - Sep 2025",
       description: [
-        "Developed and maintained comprehensive technical documentation, user guides, and training materials for Appika Business Management Software",
-        "Designed and delivered role-based training programs for marketing, sales, and operations teams",
-        "Conducted UI/UX quality assurance testing and collaborated with product development teams to identify pain points",
+        "Developed and maintained comprehensive technical documentation, user guides, and training materials for Appika Business Management Software.",
+        "Designed and delivered role-based training programs for marketing, sales, and operations teams.",
+        "Conducted UI/UX quality assurance testing and collaborated with product development teams to identify pain points.",
       ]
     }
   ];
