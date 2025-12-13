@@ -10,7 +10,7 @@ export default function Resume() {
   // Personal Information - CUSTOMIZE THIS
   const profile = {
     name: "Nanthawat Eiamsamarng",
-    title: "ERP Enablement Specialist",
+    title: "Software Enablement Specialist",
     email: "nanthawat.esa@gmail.com",
     phone: "080-443-2667",
     location: "99/80 Atoll Bali, Luang Phaeng Rd, Khlong Luang Phaeng, Chachoengsao, Chachoengsao City, 24000",
@@ -31,7 +31,7 @@ export default function Resume() {
       ]
     },
     {
-      title: "ERP Enablement Specialist",
+      title: "Appika Enablement Specialist",
       company: "TechSpace Co., Ltd.",
       period: "May 2025 - Sep 2025",
       description: [
@@ -52,8 +52,8 @@ export default function Resume() {
   ];
 
   const skills = {
-    "Hardskills": ["Business Process Mapping & Workflow Design", "System Configuration", "Technical Documentation", "System Testing & Quality Assurance"],
-    "Softskills": ["Time Management & Prioritization", "Team Collaboration & Leadership", "Training & Presentation Delivery", "Problem-Solving & Analytical Thinking"],
+    "Hard Skills": ["Business Process Mapping & Workflow Design", "System Configuration", "Technical Documentation", "System Testing & Quality Assurance"],
+    "Soft Skills": ["Time Management & Prioritization", "Team Collaboration & Leadership", "Training & Presentation Delivery", "Problem-Solving & Analytical Thinking"],
     "Tools": ["Trello", "Slack", "Figma"]
   };
 
