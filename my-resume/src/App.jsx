@@ -9,21 +9,21 @@ export default function Resume() {
 
   // Personal Information - CUSTOMIZE THIS
   const profile = {
-    name: "Nanthawat Eiamsamarng",
-    title: "ERP Enablement Specialist",
-    email: "nanthawat.esa@gmail.com",
-    phone: "080-443-2667",
+    name: "Your Name",
+    title: "Full Stack Developer",
+    email: "your.email@example.com",
+    phone: "+1 (555) 123-4567",
     location: "San Francisco, CA",
-    linkedin: "https://www.linkedin.com/in/nanthawat-eiamsamarng-2054872b0/",
-    github: "github.com/YuukiAiN0",
-    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    linkedin: "linkedin.com/in/yourprofile",
+    github: "github.com/yourusername",
+    summary: "Passionate full-stack developer with 5+ years of experience building scalable web applications. Specialized in React, Node.js, and cloud technologies. Committed to writing clean, maintainable code and delivering exceptional user experiences."
   };
 
   const experience = [
     {
-      title: "IT Support",
-      company: "TechSpace Co., Ltd.",
-      period: "Oct 2024 - April 2025",
+      title: "Senior Full Stack Developer",
+      company: "Tech Corp",
+      period: "Jan 2022 - Present",
       description: [
         "Led development of microservices architecture serving 1M+ users",
         "Improved application performance by 40% through optimization",
@@ -31,37 +31,62 @@ export default function Resume() {
       ]
     },
     {
-      title: "ERP Enablement Specialist",
-      company: "TechSpace Co., Ltd.",
-      period: "April 2025 - Sep 2025",
+      title: "Full Stack Developer",
+      company: "Startup Inc",
+      period: "Jun 2020 - Dec 2021",
       description: [
         "Built RESTful APIs using Node.js and Express",
         "Developed responsive frontend using React and TypeScript",
         "Implemented CI/CD pipelines reducing deployment time by 60%"
+      ]
+    },
+    {
+      title: "Frontend Developer",
+      company: "Digital Agency",
+      period: "Jan 2019 - May 2020",
+      description: [
+        "Created pixel-perfect UIs from design mockups",
+        "Collaborated with designers and backend teams",
+        "Optimized web applications for maximum speed and scalability"
       ]
     }
   ];
 
   const education = [
     {
-      degree: "Information Technology",
-      school: "Kanchanaphisek Technical College Mahanakorn",
-      period: "2024 - 2025",
+      degree: "Bachelor of Science in Computer Science",
+      school: "University Name",
+      period: "2015 - 2019",
       gpa: "3.8/4.0"
     }
   ];
 
   const skills = {
-    "Softskills": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js"],
-    "Hardskills": ["Node.js", "Express", "Python", "Django", "REST APIs"]
+    "Frontend": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js"],
+    "Backend": ["Node.js", "Express", "Python", "Django", "REST APIs"],
+    "Database": ["PostgreSQL", "MongoDB", "Redis", "MySQL"],
+    "DevOps": ["Docker", "AWS", "CI/CD", "Kubernetes", "Git"],
+    "Tools": ["VS Code", "Figma", "Postman", "Jira", "Slack"]
   };
 
   const projects = [
     {
-      name: "KTCM Chatbot",
-      tech: "Dialogflow ES, Vercel",
+      name: "E-Commerce Platform",
+      tech: "React, Node.js, MongoDB, Stripe",
       description: "Full-featured online shopping platform with payment integration",
-      link: "https://ktcm-chatbot.vercel.app"
+      link: "#"
+    },
+    {
+      name: "Task Management App",
+      tech: "Next.js, PostgreSQL, Prisma",
+      description: "Collaborative project management tool with real-time updates",
+      link: "#"
+    },
+    {
+      name: "Weather Dashboard",
+      tech: "React, OpenWeather API, Chart.js",
+      description: "Interactive weather forecast application with data visualization",
+      link: "#"
     }
   ];
 
