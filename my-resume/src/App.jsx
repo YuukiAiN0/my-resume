@@ -13,17 +13,17 @@ export default function Resume() {
     title: "ERP Enablement Specialist",
     email: "nanthawat.esa@gmail.com",
     phone: "0804432667",
-    location: "San Francisco, CA",
-    linkedin: "linkedin.com/in/yourprofile",
-    github: "github.com/yourusername",
-    summary: "Passionate full-stack developer with 5+ years of experience building scalable web applications. Specialized in React, Node.js, and cloud technologies. Committed to writing clean, maintainable code and delivering exceptional user experiences."
+    location: "99/80 Atoll Bali, Luang Phaeng Rd, Khlong Luang Phaeng, Chachoengsao, Chachoengsao City, 24000",
+    linkedin: "https://www.linkedin.com/in/nanthawat-eiamsamarng-2054872b0/",
+    github: "https://github.com/YuukiAiN0",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   };
 
   const experience = [
     {
-      title: "Senior Full Stack Developer",
-      company: "Tech Corp",
-      period: "Jan 2022 - Present",
+      title: "IT Support",
+      company: "TechSpace Co., Ltd.",
+      period: "Oct 2024 - Apr 2025",
       description: [
         "Led development of microservices architecture serving 1M+ users",
         "Improved application performance by 40% through optimization",
@@ -31,62 +31,37 @@ export default function Resume() {
       ]
     },
     {
-      title: "Full Stack Developer",
-      company: "Startup Inc",
-      period: "Jun 2020 - Dec 2021",
+      title: "ERP Enablement Specialist",
+      company: "TechSpace Co., Ltd.",
+      period: "May 2025 - Sep 2025",
       description: [
         "Built RESTful APIs using Node.js and Express",
         "Developed responsive frontend using React and TypeScript",
         "Implemented CI/CD pipelines reducing deployment time by 60%"
-      ]
-    },
-    {
-      title: "Frontend Developer",
-      company: "Digital Agency",
-      period: "Jan 2019 - May 2020",
-      description: [
-        "Created pixel-perfect UIs from design mockups",
-        "Collaborated with designers and backend teams",
-        "Optimized web applications for maximum speed and scalability"
       ]
     }
   ];
 
   const education = [
     {
-      degree: "Bachelor of Science in Computer Science",
-      school: "University Name",
-      period: "2015 - 2019",
+      degree: "Diploma in Information Technology",
+      school: "Kanchanaphisek Technical College Mahanakorn",
+      period: "2024 - 2025",
       gpa: "3.8/4.0"
     }
   ];
 
   const skills = {
-    "Frontend": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js"],
-    "Backend": ["Node.js", "Express", "Python", "Django", "REST APIs"],
-    "Database": ["PostgreSQL", "MongoDB", "Redis", "MySQL"],
-    "DevOps": ["Docker", "AWS", "CI/CD", "Kubernetes", "Git"],
-    "Tools": ["VS Code", "Figma", "Postman", "Jira", "Slack"]
+    "Hardskills": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js"],
+    "Softskills": ["Node.js", "Express", "Python", "Django", "REST APIs"]
   };
 
   const projects = [
     {
-      name: "E-Commerce Platform",
-      tech: "React, Node.js, MongoDB, Stripe",
+      name: "KTCM Chatbot",
+      tech: "Dialogflow ES, Vercel",
       description: "Full-featured online shopping platform with payment integration",
-      link: "#"
-    },
-    {
-      name: "Task Management App",
-      tech: "Next.js, PostgreSQL, Prisma",
-      description: "Collaborative project management tool with real-time updates",
-      link: "#"
-    },
-    {
-      name: "Weather Dashboard",
-      tech: "React, OpenWeather API, Chart.js",
-      description: "Interactive weather forecast application with data visualization",
-      link: "#"
+      link: "https://ktcm-chatbot.vercel.app"
     }
   ];
 
