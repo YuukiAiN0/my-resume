@@ -1,0 +1,316 @@
+import React, { useState, useEffect } from 'react';
+import { Mail, Phone, MapPin, Linkedin, Github, Briefcase, GraduationCap, Award, Code, Download, Moon, Sun } from 'lucide-react';
+
+export default function Resume() {
+  const [darkMode, setDarkMode] = useState(false);
+  const [activeSection, setActiveSection] = useState('about');
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [submitted, setSubmitted] = useState(false);
+
+  // Personal Information - CUSTOMIZE THIS
+  const profile = {
+    name: "Nanthawat Eiamsamarng",
+    title: "ERP Enablement Specialist",
+    email: "nanthawat.esa@gmail.com",
+    phone: "080-443-2667",
+    location: "San Francisco, CA",
+    linkedin: "https://www.linkedin.com/in/nanthawat-eiamsamarng-2054872b0/",
+    github: "github.com/YuukiAiN0",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  };
+
+  const experience = [
+    {
+      title: "IT Support",
+      company: "TechSpace Co., Ltd.",
+      period: "Oct 2024 - April 2025",
+      description: [
+        "Led development of microservices architecture serving 1M+ users",
+        "Improved application performance by 40% through optimization",
+        "Mentored junior developers and conducted code reviews"
+      ]
+    },
+    {
+      title: "ERP Enablement Specialist",
+      company: "TechSpace Co., Ltd.",
+      period: "April 2025 - Sep 2025",
+      description: [
+        "Built RESTful APIs using Node.js and Express",
+        "Developed responsive frontend using React and TypeScript",
+        "Implemented CI/CD pipelines reducing deployment time by 60%"
+      ]
+    }
+  ];
+
+  const education = [
+    {
+      degree: "Information Technology",
+      school: "Kanchanaphisek Technical College Mahanakorn",
+      period: "2024 - 2025",
+      gpa: "3.8/4.0"
+    }
+  ];
+
+  const skills = {
+    "Softskills": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js"],
+    "Hardskills": ["Node.js", "Express", "Python", "Django", "REST APIs"]
+  };
+
+  const projects = [
+    {
+      name: "KTCM Chatbot",
+      tech: "Dialogflow ES, Vercel",
+      description: "Full-featured online shopping platform with payment integration",
+      link: "https://ktcm-chatbot.vercel.app"
+    }
+  ];
+
+  const handleSubmit = () => {
+    // Simulate backend submission
+    console.log('Form submitted:', formData);
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({ name: '', email: '', message: '' });
+    }, 3000);
+  };
+
+  const handleDownload = () => {
+    alert('PDF download would be implemented with a backend endpoint');
+  };
+
+  return (
+    <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'} transition-colors duration-300`}>
+      {/* Navigation */}
+      <nav className={`sticky top-0 z-50 ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-md`}>
+        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+            {profile.name}
+          </h1>
+          <div className="flex gap-4 items-center">
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
+              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+            <button
+              onClick={handleDownload}
+              className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <Download size={18} />
+              Download PDF
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        {/* Header Section */}
+        <header className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-8 mb-8`}>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div>
+              <h2 className="text-4xl font-bold mb-2">{profile.name}</h2>
+              <p className="text-xl text-blue-600 dark:text-blue-400 mb-4">{profile.title}</p>
+              <div className="flex flex-wrap gap-4 text-sm">
+                <span className="flex items-center gap-2">
+                  <Mail size={16} />
+                  {profile.email}
+                </span>
+                <span className="flex items-center gap-2">
+                  <Phone size={16} />
+                  {profile.phone}
+                </span>
+                <span className="flex items-center gap-2">
+                  <MapPin size={16} />
+                  {profile.location}
+                </span>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <a href={`https://${profile.linkedin}`} target="_blank" rel="noopener noreferrer" 
+                 className="p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                <Linkedin size={20} />
+              </a>
+              <a href={`https://${profile.github}`} target="_blank" rel="noopener noreferrer"
+                 className="p-3 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition-colors">
+                <Github size={20} />
+              </a>
+            </div>
+          </div>
+        </header>
+
+        {/* Section Navigation */}
+        <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-4 mb-8`}>
+          <div className="flex flex-wrap gap-2">
+            {['about', 'experience', 'skills', 'projects', 'education', 'contact'].map((section) => (
+              <button
+                key={section}
+                onClick={() => setActiveSection(section)}
+                className={`px-4 py-2 rounded-lg capitalize transition-colors ${
+                  activeSection === section
+                    ? 'bg-blue-600 text-white'
+                    : darkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
+                }`}
+              >
+                {section}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Content Sections */}
+        <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-8`}>
+          {activeSection === 'about' && (
+            <div>
+              <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                <Award className="text-blue-600" />
+                About Me
+              </h3>
+              <p className="text-lg leading-relaxed">{profile.summary}</p>
+            </div>
+          )}
+
+          {activeSection === 'experience' && (
+            <div>
+              <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                <Briefcase className="text-blue-600" />
+                Work Experience
+              </h3>
+              <div className="space-y-6">
+                {experience.map((job, idx) => (
+                  <div key={idx} className={`border-l-4 border-blue-600 pl-4 ${darkMode ? 'bg-gray-700' : 'bg-gray-50'} p-4 rounded`}>
+                    <h4 className="text-xl font-semibold">{job.title}</h4>
+                    <p className="text-blue-600 dark:text-blue-400 font-medium">{job.company}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">{job.period}</p>
+                    <ul className="list-disc list-inside space-y-1">
+                      {job.description.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeSection === 'skills' && (
+            <div>
+              <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                <Code className="text-blue-600" />
+                Technical Skills
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {Object.entries(skills).map(([category, items]) => (
+                  <div key={category} className={`${darkMode ? 'bg-gray-700' : 'bg-gray-50'} p-4 rounded-lg`}>
+                    <h4 className="font-semibold text-lg mb-3 text-blue-600 dark:text-blue-400">{category}</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {items.map((skill, idx) => (
+                        <span key={idx} className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeSection === 'projects' && (
+            <div>
+              <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                <Code className="text-blue-600" />
+                Featured Projects
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {projects.map((project, idx) => (
+                  <div key={idx} className={`${darkMode ? 'bg-gray-700' : 'bg-gray-50'} p-6 rounded-lg hover:shadow-xl transition-shadow`}>
+                    <h4 className="text-xl font-semibold mb-2">{project.name}</h4>
+                    <p className="text-sm text-blue-600 dark:text-blue-400 mb-3">{project.tech}</p>
+                    <p className="mb-4">{project.description}</p>
+                    <a href={project.link} className="text-blue-600 dark:text-blue-400 hover:underline">
+                      View Project →
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeSection === 'education' && (
+            <div>
+              <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                <GraduationCap className="text-blue-600" />
+                Education
+              </h3>
+              {education.map((edu, idx) => (
+                <div key={idx} className={`${darkMode ? 'bg-gray-700' : 'bg-gray-50'} p-6 rounded-lg`}>
+                  <h4 className="text-xl font-semibold">{edu.degree}</h4>
+                  <p className="text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{edu.period}</p>
+                  <p className="mt-2">GPA: {edu.gpa}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {activeSection === 'contact' && (
+            <div>
+              <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                <Mail className="text-blue-600" />
+                Get In Touch
+              </h3>
+              {submitted ? (
+                <div className="bg-green-100 dark:bg-green-900 border border-green-400 text-green-700 dark:text-green-300 px-4 py-3 rounded">
+                  Thank you! Your message has been sent successfully.
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  <div>
+                    <label className="block mb-2 font-medium">Name</label>
+                    <input
+                      type="text"
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      className={`w-full px-4 py-2 rounded-lg border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'}`}
+                    />
+                  </div>
+                  <div>
+                    <label className="block mb-2 font-medium">Email</label>
+                    <input
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      className={`w-full px-4 py-2 rounded-lg border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'}`}
+                    />
+                  </div>
+                  <div>
+                    <label className="block mb-2 font-medium">Message</label>
+                    <textarea
+                      rows="4"
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      className={`w-full px-4 py-2 rounded-lg border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'}`}
+                    />
+                  </div>
+                  <button
+                    onClick={handleSubmit}
+                    className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className={`${darkMode ? 'bg-gray-800' : 'bg-white'} mt-12 py-6 text-center`}>
+        <p>© 2024 {profile.name}. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
