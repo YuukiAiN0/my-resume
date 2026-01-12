@@ -313,11 +313,6 @@ export default function Resume() {
           )}
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className={`${darkMode ? 'bg-gray-800' : 'bg-white'} mt-12 py-6 text-center`}>
-        <p>© 2025 {profile.name}. All rights reserved.</p>
-      </footer>
     </div>
   );
 }
