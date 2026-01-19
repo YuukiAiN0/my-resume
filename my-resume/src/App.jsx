@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, Briefcase, GraduationCap, Award, Code, Download, Moon, Sun, Certificate } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github, Briefcase, GraduationCap, Award, Code, Download, Moon, Sun, BadgeCheck } from 'lucide-react';
 
 export default function Resume() {
   const [darkMode, setDarkMode] = useState(false);
@@ -275,7 +275,7 @@ export default function Resume() {
           {activeSection === 'certifications' && (
             <div>
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <Certificate className="text-blue-600" />
+                <BadgeCheck className="text-blue-600" />
                 Certifications
               </h3>
               {certifications.map((cert, idx) => (
