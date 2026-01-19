@@ -288,7 +288,7 @@ export default function Resume() {
             </div>
           )}
 
-          {activeSection === 'award' && (
+          {activeSection === 'awards' && (
             <div>
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <Award className="text-blue-600" />
