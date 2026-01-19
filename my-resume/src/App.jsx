@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, Briefcase, GraduationCap, Award, Code, Download, Moon, Sun } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github, Briefcase, GraduationCap, Award, Code, Download, Moon, Sun, Certificate } from 'lucide-react';
 
 export default function Resume() {
   const [darkMode, setDarkMode] = useState(false);
   const [activeSection, setActiveSection] = useState('about');
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
 
   // Personal Information - CUSTOMIZE THIS
   const profile = {
     name: "Nanthawat Eiamsamarng",
-    title: "Software Enablement Specialist",
+    title: "Application Support",
     email: "nanthawat.esa@gmail.com",
     phone: "080-443-2667",
     location: "99/80 Atoll Bali, Luang Phaeng Rd, Khlong Luang Phaeng, Chachoengsao, Chachoengsao City, 24000",
     linkedin: "https://www.linkedin.com/in/nanthawat-eiamsamarng-2054872b0/",
     github: "https://github.com/YuukiAiN0",
-    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    summary: "Experienced Application Support professional with a strong background in IT support, technical documentation, and system enablement. Proven expertise in resolving hardware, software, and network issues, delivering comprehensive training programs, and conducting quality assurance testing. Skilled in business process mapping, workflow design, and creating user-friendly technical documentation. Passionate about leveraging technology to improve productivity and user experience."
   };
 
   const experience = [
@@ -44,10 +42,16 @@ export default function Resume() {
 
   const education = [
     {
+      degree: "Vocational Certificate in Information Technology",
+      school: "Intrachai Commercial College",
+      period: "2020 - 2023",
+      gpa: "3.7/4.0"
+    },
+    {
       degree: "Diploma in Information Technology",
       school: "Kanchanaphisek Technical College Mahanakorn",
       period: "2024 - 2025",
-      gpa: "3.8/4.0"
+      gpa: "3.7/4.0"
     }
   ];
 
@@ -72,15 +76,21 @@ export default function Resume() {
     }
   ];
 
-  const handleSubmit = () => {
-    // Simulate backend submission
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: '', email: '', message: '' });
-    }, 3000);
-  };
+  const awards = [
+    {
+      awardname: "4th Place - IT Skills Competition in Programming and Networking through DevOps Processes",
+      participate: "Information Technology Competition at Kanchanaphisek Technical College Mahanakorn",
+      time: "04/10/2025 - 06/10/2025",
+    }
+  ];
+
+  const certifications = [
+    {
+      name: "TOEIC",
+      score: "690",
+      date: "2023",
+    }
+  ];
 
   const handleDownload = () => {
     alert('PDF download would be implemented with a backend endpoint');
@@ -150,7 +160,7 @@ export default function Resume() {
         {/* Section Navigation */}
         <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-4 mb-8`}>
           <div className="flex flex-wrap gap-2">
-            {['about', 'experience', 'skills', 'projects', 'education'].map((section) => (
+            {['about', 'experience', 'skills', 'projects', 'education', 'awards', 'certifications',].map((section) => (
               <button
                 key={section}
                 onClick={() => setActiveSection(section)}
@@ -262,55 +272,38 @@ export default function Resume() {
             </div>
           )}
 
-          {activeSection === 'contact' && (
+          {activeSection === 'certifications' && (
             <div>
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <Mail className="text-blue-600" />
-                Get In Touch
+                <Certificate className="text-blue-600" />
+                Certifications
               </h3>
-              {submitted ? (
-                <div className="bg-green-100 dark:bg-green-900 border border-green-400 text-green-700 dark:text-green-300 px-4 py-3 rounded">
-                  Thank you! Your message has been sent successfully.
+              {certifications.map((cert, idx) => (
+                <div key={idx} className={`${darkMode ? 'bg-gray-700' : 'bg-gray-50'} p-6 rounded-lg`}>
+                  <h4 className="text-xl font-semibold">{cert.name}</h4>
+                  {cert.score && <p className="text-blue-600 dark:text-blue-400 font-medium">Score: {cert.score}</p>}
+                  {cert.date && <p className="text-sm text-gray-500 dark:text-gray-400">{cert.date}</p>}
                 </div>
-              ) : (
-                <div className="space-y-4">
-                  <div>
-                    <label className="block mb-2 font-medium">Name</label>
-                    <input
-                      type="text"
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      className={`w-full px-4 py-2 rounded-lg border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'}`}
-                    />
-                  </div>
-                  <div>
-                    <label className="block mb-2 font-medium">Email</label>
-                    <input
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className={`w-full px-4 py-2 rounded-lg border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'}`}
-                    />
-                  </div>
-                  <div>
-                    <label className="block mb-2 font-medium">Message</label>
-                    <textarea
-                      rows="4"
-                      value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      className={`w-full px-4 py-2 rounded-lg border ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'}`}
-                    />
-                  </div>
-                  <button
-                    onClick={handleSubmit}
-                    className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
-                  >
-                    Send Message
-                  </button>
-                </div>
-              )}
+              ))}
             </div>
           )}
+
+          {activeSection === 'award' && (
+            <div>
+              <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                <Award className="text-blue-600" />
+                Awards
+              </h3>
+              {awards.map((award, idx) => (
+                <div key={idx} className={`${darkMode ? 'bg-gray-700' : 'bg-gray-50'} p-6 rounded-lg`}>
+                  <h4 className="text-xl font-semibold">{award.awardname}</h4>
+                  <p className="text-blue-600 dark:text-blue-400 font-medium">{award.participate}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{award.time}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
         </div>
       </div>
     </div>
