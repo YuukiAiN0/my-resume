@@ -133,7 +133,7 @@ export default function Resume() {
                 <img 
                   src={profile.image} 
                   alt={profile.name}
-                  className="w-32 h-32 rounded-full object-cover border-4 border-blue-600 shadow-lg"
+                  className="w-32 h-32 rounded-lg object-cover border-4 border-blue-600 shadow-lg"
                 />
               )}
               <div>
