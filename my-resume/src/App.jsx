@@ -261,14 +261,16 @@ export default function Resume() {
                 <GraduationCap className="text-blue-600" />
                 Education
               </h3>
-              {education.map((edu, idx) => (
-                <div key={idx} className={`${darkMode ? 'bg-gray-700' : 'bg-gray-50'} p-6 rounded-lg`}>
-                  <h4 className="text-xl font-semibold">{edu.degree}</h4>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">{edu.period}</p>
-                  <p className="mt-2">GPA: {edu.gpa}</p>
-                </div>
-              ))}
+              <div className="space-y-6">
+                {education.map((edu, idx) => (
+                  <div key={idx} className={`${darkMode ? 'bg-gray-700' : 'bg-gray-50'} p-6 rounded-lg`}>
+                    <h4 className="text-xl font-semibold">{edu.degree}</h4>
+                    <p className="text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{edu.period}</p>
+                    <p className="mt-2">GPA: {edu.gpa}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
 
