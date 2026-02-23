@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Linkedin, Github, Briefcase, GraduationCap, Award, Code, Download, Moon, Sun, BadgeCheck } from 'lucide-react';
+import profileImage from './imageresume.png';
 
 export default function Resume() {
   const [darkMode, setDarkMode] = useState(false);
@@ -9,6 +10,7 @@ export default function Resume() {
   const profile = {
     name: "Nanthawat Eiamsamarng",
     title: "Application Support",
+    image: profileImage,
     email: "nanthawat.esa@gmail.com",
     phone: "080-443-2667",
     location: "99/80 Atoll Bali, Luang Phaeng Rd, Khlong Luang Phaeng, Chachoengsao, Chachoengsao City, 24000",
@@ -126,22 +128,31 @@ export default function Resume() {
         {/* Header Section */}
         <header className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-lg p-8 mb-8`}>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-            <div>
-              <h2 className="text-4xl font-bold mb-2">{profile.name}</h2>
-              <p className="text-xl text-blue-600 dark:text-blue-400 mb-4">{profile.title}</p>
-              <div className="flex flex-wrap gap-4 text-sm">
-                <span className="flex items-center gap-2">
-                  <Mail size={16} />
-                  {profile.email}
-                </span>
-                <span className="flex items-center gap-2">
-                  <Phone size={16} />
-                  {profile.phone}
-                </span>
-                <span className="flex items-center gap-2">
-                  <MapPin size={16} />
-                  {profile.location}
-                </span>
+            <div className="flex items-start gap-6">
+              {profile.image && (
+                <img 
+                  src={profile.image} 
+                  alt={profile.name}
+                  className="w-32 h-32 rounded-full object-cover border-4 border-blue-600 shadow-lg"
+                />
+              )}
+              <div>
+                <h2 className="text-4xl font-bold mb-2">{profile.name}</h2>
+                <p className="text-xl text-blue-600 dark:text-blue-400 mb-4">{profile.title}</p>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  <span className="flex items-center gap-2">
+                    <Mail size={16} />
+                    {profile.email}
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Phone size={16} />
+                    {profile.phone}
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <MapPin size={16} />
+                    {profile.location}
+                  </span>
+                </div>
               </div>
             </div>
             <div className="flex gap-4">
