@@ -14,8 +14,8 @@ export default function Resume() {
     email: "nanthawat.esa@gmail.com",
     phone: "080-443-2667",
     location: "99/80 Atoll Bali, Luang Phaeng Rd, Khlong Luang Phaeng, Chachoengsao, Chachoengsao City, 24000",
-    linkedin: "https://www.linkedin.com/in/nanthawat-eiamsamarng-2054872b0/",
-    github: "https://github.com/YuukiAiN0",
+    linkedin: "www.linkedin.com/in/nanthawat-eiamsamarng-2054872b0/",
+    github: "github.com/YuukiAiN0",
     summary: "Experienced Application Support professional with a strong background in IT support, technical documentation, and system enablement. Proven expertise in resolving hardware, software, and network issues, delivering comprehensive training programs, and conducting quality assurance testing. Skilled in business process mapping, workflow design, and creating user-friendly technical documentation. Passionate about leveraging technology to improve productivity and user experience."
   };
 
